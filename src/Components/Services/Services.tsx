@@ -1,11 +1,9 @@
+import classNames from "classnames";
 import React from "react";
-
+import { styles } from "./Services.style";
 const Services = () => {
-  return (
-    <div>
-      <h3>This is Services Section</h3>
-    </div>
-  );
+	const classes = styles();
+	return <h3>This is Services Section</h3>;
 };
 
 export default Services;
