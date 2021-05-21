@@ -11,7 +11,7 @@ export const styles = createUseStyles({
     display: "flex",
     justifyContent: "space-between",
     padding: "1rem",
-    zIndex: 99,
+    zIndex: 9999,
   },
   list: {
     "& > li": {

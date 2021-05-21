@@ -4,7 +4,7 @@ import { createUseStyles } from "react-jss";
 import background from "../../imgs/background-home.webp";
 export const styles = createUseStyles({
   wrapper: {
-    width: "100%",
+    width: "auto",
     height: "100vh",
     color: "#fff",
     background: `url(${background})`,
@@ -12,14 +12,14 @@ export const styles = createUseStyles({
     backgroundRepeat: "repeat",
     display:'flex',
     flexDirection:'column',
-    alignItems:'center',
+    alignItems:'flex-start',
     justifyContent:'center',
   },
   timeline:{
   width:1,
   height:"300%",
-  left:-30,
-  top:0,
+  left:50,
+  top:"34%",
   position:'absolute',
   zIndex:9,
   background:' #5918df',
@@ -60,8 +60,7 @@ transform:'translate(-42px, 60px) rotate(-90deg)',
   container: {
     display: "flex",
     flexDirection: "column",
-    margin:'0 5rem',
-    position:'relative',
+    marginLeft:'4rem'
   },
   typing:{
 marginLeft:10,
@@ -72,41 +71,96 @@ fontFamily:"'Roboto', sans-serif",
     width:'max-content',
     position:'relative',
     fontWeight: 100,
-    color: "gray",
+    color:'gray',
     "&:after":{
       content:'""',
       position:'absolute',
-      left:0,
       top:0,
-      bottom:0,
       height:'100%',
-      background:"#5918df",
+      width:0,
+      background:"#f9f9f9",
       zIndex:1,
-
       willChange:'transform',
+      animation:"$animate1 1.4s ease-in-out",
+      animationDelay:'0.1s'
     },
   },
+  "@keyframes animate1":{
+    "0%":{
+      width:0,
+      left:0,
+      
+    },
+    "50%":{
+      width:'100%',
+    },
+    "100%":{
+      width:0,
+      right:0,
+    }
+  },
   intro: {
+    width:'auto', 
     marginTop: "2rem",
     fontSize: "2.5rem",
-    width: "55vw",
     fontWeight: 800,
+    position:'relative',
+    "&:after":{
+      content:'""',
+      position:'absolute',
+      top:0,
+      height:'100%',
+      width:0,
+      background:"#5918df",
+      zIndex:1,
+      willChange:'transform',
+     animation:'$animate1 1.5s ease-in-out',
+           animationDelay:'0.3s'
+    }
   },
   develop: {
     letterSpacing: ".2rem",
   },
   show: {
+    width:'max-content',
     marginTop: "1.2rem",
     fontSize: '2rem',
     color: "gray",
+      position:'relative',
+    "&:after":{
+      content:'""',
+      position:'absolute',
+      top:0,
+      height:'100%',
+      width:0,
+      background:"#5918df",
+      zIndex:1,
+      willChange:'transform',
+     animation:'$animate1 1.6s ease-in-out',
+    animationDelay:'0.5s'
+    }
   },
   name: {
-    color: "#5918DF",
+     color:'#5918df'
   },
   more: {
+    width:'auto',
     marginTop: ".7rem",
     fontSize: "2rem",
     fontWeight: 800,
+      position:'relative',
+    "&:after":{
+      content:'""',
+      position:'absolute',
+      top:0,
+      height:'100%',
+      width:0,
+      background:"#5918df",
+      zIndex:1,
+      willChange:'transform',
+     animation:'$animate1 1.4s ease-in-out',
+     animationDelay:'.4s'
+    }
   },
   down: {
     position: "absolute",
@@ -138,5 +192,13 @@ fontFamily:"'Roboto', sans-serif",
     show:{
       fontSize:'1.8rem',
     },
+    timeline:{
+        left:"24%",
+        top:'38%',
+    },
+    container:{
+      width:'auto',
+      marginLeft:'30rem',
+    }
   }
 });

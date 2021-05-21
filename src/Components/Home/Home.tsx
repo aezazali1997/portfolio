@@ -3,8 +3,13 @@ import { styles } from "./Home.style";
 import { BiMouse } from "react-icons/bi";
 import classnames from "classnames";
 import ReactTypingEffect from "react-typing-effect";
+import useWebAnimations from "@wellyshen/use-web-animations";
 
 const Home = () => {
+	/* 	const animateStart = useWebAnimations({
+		keyframes: {},
+		animationOptions: {},
+	}); */
 	const classes = styles();
 	return (
 		<div id="start" className={classes.wrapper}>
@@ -26,7 +31,7 @@ const Home = () => {
 					i <em>design</em> and <span className={classes.develop}>develop</span>
 					<span className={classes.typing}>
 						<ReactTypingEffect
-							text={["Web Apps", "Progressive Web App", "Full Stack Web Apps"]}
+							text={["Web Apps", "Progressive Web App", "Complete websites"]}
 							speed={200}
 							eraseDelay={2000}
 							eraseSpeed={100}

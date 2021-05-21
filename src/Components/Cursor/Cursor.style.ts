@@ -30,4 +30,11 @@ export const styles = createUseStyles({
       animation: "$effect2 .5s infinite alternate",
     },
   },
+  '@media (max-width:768px)':{
+    OuterCursor:{
+      width:40,
+      height:40,
+      display:'none',
+    }
+  }
 });
