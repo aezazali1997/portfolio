@@ -5,7 +5,6 @@ import background from "../../imgs/background-home.webp";
 export const styles = createUseStyles({
   wrapper: {
     width: "auto",
-    height: "100vh",
     color: "#fff",
     background: `url(${background})`,
     backgroundPosition: "center",
@@ -60,9 +59,11 @@ transform:'translate(-42px, 60px) rotate(-90deg)',
   container: {
     display: "flex",
     flexDirection: "column",
-    marginLeft:'4rem'
+    marginLeft:'4rem',
+    padding:'23rem 0',
+
   },
-  typing:{
+typing:{
 marginLeft:10,
 fontSize:'1.7rem',
 fontFamily:"'Roboto', sans-serif",

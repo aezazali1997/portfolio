@@ -1,9 +1,7 @@
 import {createUseStyles} from 'react-jss';
-import { transform } from 'typescript';
 export const styles=createUseStyles({
   wrapper:{
      width: "100%",
-    height: "100vh",
     color: "#fff",
     background:'linear-gradient(to right,#1b1627,#191426)',
     padding:'2rem 0',
@@ -55,15 +53,14 @@ export const styles=createUseStyles({
     margin:'2rem 0',
     position:'relative',
     transform:'scale3d(1,1,1) perspective(700px)',
-
     "&:hover":{
       cursor:'pointer',
-      transform:"scale3d(1.05,1.05,1.05) rotateX(-15deg) rotateY(15deg)",
+      transform:"scale3d(1.05,1.05,1.05)",
     }
   },
   webImage:{
-width:230,
-height:150,
+width:250,
+height:160,
 display:'block',
 position:'absolute',
 bottom:10,

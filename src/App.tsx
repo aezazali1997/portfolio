@@ -3,6 +3,8 @@ import Home from "./Components/Home/Home";
 import Services from "./Components/Services/Services";
 import Cursor from "./Components/Cursor/Cursor";
 import Navbar from "./Components/Navbar/Navbar";
+import AboutMe from "./Components/About Me/AboutMe";
+import ContactMe from "./Components/Contact Me/ContactMe";
 
 function App() {
 	let xCord: number;
@@ -18,6 +20,8 @@ function App() {
 			<Navbar />
 			<Home />
 			<Services />
+			<AboutMe />
+			<ContactMe />
 		</>
 	);
 }
