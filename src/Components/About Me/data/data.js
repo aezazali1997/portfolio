@@ -2,7 +2,7 @@ export const data = {
 	class: {
 		name: "Aezaz Ali",
 		comment:
-			"I am a web developer currently working in React Js I try to improve my skills everyday",
+			"I am a web developer currently working in React Js  I try to improve my skills everyday",
 		const: {
 			name: "constructor",
 			variables: {
@@ -15,11 +15,9 @@ export const data = {
 				personality: "friendly",
 			},
 		},
-	},
-	methods: [
-		{
+		method1: {
 			name: "skills",
-			array: [
+			fields: [
 				{
 					name: "Frontend",
 					values: ["React", "Angular", "Vue", "Jquery"],
@@ -34,17 +32,17 @@ export const data = {
 				},
 			],
 		},
-		{
+		method2: {
 			name: "experience",
-			return: {
+			exp: {
 				company: "Mushaaf IT",
 				skills: ["HTML/CSS/Bootstrap", "React", "Wordpress"],
 				time: "2020-2021",
 			},
 		},
-		{
+		method3: {
 			name: "education",
-			return: {
+			edu: {
 				university: "Air University",
 				bachelors: "BS Computer Science",
 				city: "Islamabad",
@@ -52,9 +50,9 @@ export const data = {
 				graduated: "2020",
 			},
 		},
-	],
+	},
 };
-export const colors = [
+/* export const colors = [
 	{
 		keywords: ["class", "this", "const", "=>"],
 		hexCode: "#3e85c9",
@@ -67,4 +65,4 @@ export const colors = [
 		keywords: ["{", "(", ")", "=", "}", ";", "[", "]", ","],
 		hexCode: "#fff",
 	},
-];
+]; */

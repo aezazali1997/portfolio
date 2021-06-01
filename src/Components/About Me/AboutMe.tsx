@@ -7,18 +7,18 @@ const AboutMe: FC = () => {
 	const classes = styles();
 
 	return (
-		//<AppContext.Provider value={data:data}>
-		<div className={classes.container}>
-			<div className={classes.wrapper}>
-				<div className={classes.title}>About / &gt;</div>
-				<div className={classes.marTop}>
-					<div className={classes.codeWrap}>
-						<Class />
+		<AppContext.Provider value={data}>
+			<div className={classes.container}>
+				<div className={classes.wrapper}>
+					<div className={classes.title}>About / &gt;</div>
+					<div className={classes.marTop}>
+						<div className={classes.codeWrap}>
+							<Class />
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		//<AppContext.Provider/>
+		</AppContext.Provider>
 	);
 };
 

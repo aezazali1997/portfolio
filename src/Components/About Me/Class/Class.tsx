@@ -1,20 +1,19 @@
-import React, { FC } from "react";
-import classNames from "classnames";
+import React, { FC, useContext } from "react";
 import { styles } from "./Class.style";
-import { data } from "../data/data";
 import MultLinecomment from "../Multicomment/MultLinecomment";
 import Constructor from "../Constructor/Constructor";
+import AppContex from "../ContextApi/ContextApi";
+import Methods from "../Methods/Methods";
 const Class: FC = () => {
 	const classes = styles();
+	const data = useContext(AppContex);
 	return (
-		<div>
-			{/* class comment should be in about me comp */}
-			{/* before and after brackets */}
-			<span>{Object.keys(data)[0]}</span>
-			<span>{data["class"].name}</span>
-			<MultLinecomment comment={data.class.comment} />{" "}
-			{/* should use it as part of global state varialbe */}
-			<Constructor data={data.class.const} />
+		<div className={classes.class}>
+			<span className={classes.classKeyword}>{Object.keys(data)[0]}</span>
+			<span className={classes.name}>{data.class.name}</span>
+			<MultLinecomment />
+			<Constructor />
+			<Methods />
 		</div>
 	);
 };

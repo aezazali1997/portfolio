@@ -1,72 +1,91 @@
-import React from "react";
+import React, { createContext } from "react";
 import { data } from "../data/data";
-console.log(data);
-interface ISkills {
-	name: String;
-	values: String[];
-}
-const Props = {
+/* refinments of modals about objects */
+type Field = {
+	name: string;
+	values: string[];
+};
+type Props = {
 	class: {
-		name: String,
-		comment: String,
+		name: string;
+		comment: string;
 		const: {
-			name: String,
+			name: string;
 			variables: {
-				birthDay: String,
-				age: String,
-				hobby: String,
-				personality: String,
+				birthDay: string;
+				age: string;
+				hobby: string;
+				personality: string;
+			};
+		};
+
+		method1: {
+			name: string;
+			fields: Field[];
+		};
+
+		method2: {
+			name: string;
+			exp: {
+				company: string;
+				skills: string[];
+				time: string;
+			};
+		};
+		method3: {
+			name: string;
+			edu: {
+				university: string;
+				bachelors: string;
+				city: string;
+				started: string;
+				graduated: string;
+			};
+		};
+	};
+};
+const defaultValue: Props = {
+	class: {
+		name: "",
+		comment: "",
+		const: {
+			name: "",
+			variables: {
+				birthDay: "",
+				age: "",
+				hobby: "",
+				personality: "",
 			},
 		},
-	},
-	methods: [
-		{
-			name: String,
-			array: [],
-		},
-	],
-};
-const defaultValue = {};
-const AppContex = React.createContext(defaultValue);
-export default AppContex;
-/* 
-class: {
-	methods: [
-		{
-			name: "skills",
-			array: [
+		method1: {
+			name: "",
+			fields: [
 				{
-					name: "Frontend",
-					values: ["React", "Angular", "Vue", "Jquery"],
-				},
-				{
-					name: "Backend",
-					values: ["Node", "PHP", "Exoress"],
-				},
-				{
-					name: "Databases",
-					values: ["MongoDB", "Angular", "Vue", "Jquery"],
+					name: "",
+					values: [],
 				},
 			],
 		},
-		{
-			name: "experience",
-			return: {
-				company: "Mushaaf IT",
-				skills: ["HTML/CSS/Bootstrap", "React", "Wordpress"],
-				time: "2020-2021",
+
+		method2: {
+			name: "",
+			exp: {
+				company: "",
+				skills: [],
+				time: "",
 			},
 		},
-		{
-			name: "education",
-			return: {
-				university: "Air University",
-				bachelors: "BS Computer Science",
-				city: "Islamabad",
-				started: "2016",
-				graduated: "2020",
+		method3: {
+			name: "",
+			edu: {
+				university: "",
+				bachelors: "",
+				city: "",
+				graduated: "",
+				started: "",
 			},
 		},
-	],
+	},
 };
-*/
+const AppContex = React.createContext<Props>(defaultValue);
+export default AppContex;

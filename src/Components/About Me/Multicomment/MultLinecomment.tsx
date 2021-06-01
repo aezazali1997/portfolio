@@ -1,9 +1,8 @@
-import React, { FC } from "react";
-type Props = {
-	comment: string;
-};
-const MultLinecomment: FC<Props> = ({ comment }) => {
-	return <div>{comment}</div>;
+import React, { FC, useContext } from "react";
+import AppContex from "../ContextApi/ContextApi";
+const MultLinecomment: FC = () => {
+	const data = useContext(AppContex);
+	return <div>{data.class.comment}</div>;
 };
 
 export default MultLinecomment;

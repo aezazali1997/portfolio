@@ -35,7 +35,7 @@ export const styles = createUseStyles({
       fontSize:18,
       lineHeight:'1.8rem',
       position:'relative',
-      "&:hover:before":{
+      /* "&:hover:before":{
         content:'""',
         position:'absolute',
         zIndex:-1, // update this to display the hover effect
@@ -44,13 +44,8 @@ export const styles = createUseStyles({
         left:'-35%',
         height:'100%', 
         background:'#807a6c',
-      },
-      "& span" :{
-        margin:'0 .3rem',
-        zIndex:2,
-        position:'relative',
-      },
-      "&:after":{
+      }, */
+       /* "&:after":{
         content:"attr(data-line-nmbr)",
         position:'absolute',
         left:-70,
@@ -58,7 +53,7 @@ export const styles = createUseStyles({
         fontSize:18,
         color:'rgba(255,255,255,.6)',
         fontFamily:'serif',
-      }
+      } */
     }
     },
   /* colors */
