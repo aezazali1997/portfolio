@@ -2,7 +2,7 @@ export const data = {
 	class: {
 		name: "Aezaz Ali",
 		comment:
-			"I am a web developer currently working in React Js  I try to improve my skills everyday",
+			"I am a web developer currently working in React Js.I try to improve my skills everyday",
 		const: {
 			name: "constructor",
 			variables: {
@@ -20,34 +20,38 @@ export const data = {
 			fields: [
 				{
 					name: "Frontend",
-					values: ["React", "Angular", "Vue", "Jquery"],
+					values: ["'React' ,", "'Angular' ,", "'Vue' ,", "'Jquery'"],
 				},
 				{
 					name: "Backend",
-					values: ["Node", "PHP", "Exoress"],
+					values: ["'Node' ,", "'PHP' ,", "'Express'"],
 				},
 				{
 					name: "Databases",
-					values: ["MongoDB", "Angular", "Vue", "Jquery"],
+					values: ["'MongoDB' ,", "'Angular' ,", "'Vue' ,", "'Jquery'"],
+				},
+				{
+					name: "CMS",
+					values: ["'Wordpress'"],
 				},
 			],
 		},
 		method2: {
 			name: "experience",
 			exp: {
-				company: "Mushaaf IT",
-				skills: ["HTML/CSS/Bootstrap", "React", "Wordpress"],
-				time: "2020-2021",
+				company: "'Mushaaf IT'",
+				skills: [" 'HTML/CSS/Bootstrap' , ", " 'React' ,", " 'Wordpress'"],
+				time: "'2020-2021'",
 			},
 		},
 		method3: {
-			name: "education",
+			name: "Education",
 			edu: {
-				university: "Air University",
-				bachelors: "BS Computer Science",
-				city: "Islamabad",
-				started: "2016",
-				graduated: "2020",
+				university: "'Air University'",
+				degree: "'BS Computer Science'",
+				city: "'Islamabad'",
+				started: "'2016'",
+				graduated: "'2020'",
 			},
 		},
 	},

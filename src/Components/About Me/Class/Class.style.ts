@@ -21,7 +21,4 @@ export const styles = createUseStyles({
       top:-5,
       },
   },
-  classKeyword:{
-    marginRight:'.6rem',
-  }
 });

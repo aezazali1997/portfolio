@@ -36,7 +36,7 @@ type Props = {
 			name: string;
 			edu: {
 				university: string;
-				bachelors: string;
+				degree: string;
 				city: string;
 				started: string;
 				graduated: string;
@@ -79,7 +79,7 @@ const defaultValue: Props = {
 			name: "",
 			edu: {
 				university: "",
-				bachelors: "",
+				degree: "",
 				city: "",
 				graduated: "",
 				started: "",

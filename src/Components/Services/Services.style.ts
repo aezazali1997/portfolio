@@ -8,7 +8,7 @@ export const styles=createUseStyles({
     overflow:'hidden'
   },
   textContainer:{
-    marginLeft:84,
+    marginLeft:'4rem',
     position:'relative',
   },
   web:{
@@ -26,7 +26,7 @@ export const styles=createUseStyles({
     "&::before":{
       content:'""',
        position:'absolute',
-   left:-40,
+     left:-35,
     top: 0,
     zIndex: 10,
     width: 9,
@@ -83,7 +83,7 @@ right:10,
   },
   "@media (min-width:768px)":{
    textContainer:{
-    marginLeft:490,
+    marginLeft:'30rem',
    },
    projectCreated:{
      fontSize:'2rem',

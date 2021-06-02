@@ -1,13 +1,13 @@
 import { createUseStyles } from "react-jss";
 export const styles=createUseStyles({
-  const:{
-    height:'max-content',
+    container:{
+    height:'max-height',
     position:'relative',
     "&::after":{
       content:'"}"',
       position:'relative',
       bottom:0,
-      left:0,   
+      right:-10,
     }
   },
 })

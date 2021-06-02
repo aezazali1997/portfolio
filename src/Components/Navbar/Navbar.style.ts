@@ -3,15 +3,20 @@ export const styles = createUseStyles({
   wrapper: {
     width: "100%",
     height: 60,
-    background: "rgba(0,0,0,.8)",
-    position: "fixed",
+    zIndex:100,
+    position:'fixed',
+    background: "rgba( 0 ,0 , 0, .9 )",
     transition: "all .3s ease-out",
   },
-  navbar: {
+    navbar: {
     display: "flex",
     justifyContent: "space-between",
     padding: "1rem",
-    zIndex: 9999,
+    zIndex: 101,
+  },
+  navbarList:{
+    display:'flex',
+    alignItems:'center'
   },
   list: {
     "& > li": {
@@ -33,7 +38,7 @@ export const styles = createUseStyles({
     },
   },
   hide: {
-    transform: "translatey(-100%)",
+    transform: "translateY(-100%)",
   },
   logo: {
     transition: "all .1s ease-in",

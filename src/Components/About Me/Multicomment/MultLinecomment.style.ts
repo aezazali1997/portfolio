@@ -1,6 +1,12 @@
 import { createUseStyles } from "react-jss"
 export const styles=createUseStyles({
-  comment:{
-    color:"#2c6e29",
-  }
+  container: {
+    position:'relative',
+    "&:before":{
+      position:'relative',
+      content:'"//"',
+      top:0,
+      left:0,
+    },
+  },
 })

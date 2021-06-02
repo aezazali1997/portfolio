@@ -10,7 +10,4 @@ export const styles = createUseStyles({
       right:-10,
     }
   },
-  margin1:{
-    margin:"0 .6rem",
-  }
 })

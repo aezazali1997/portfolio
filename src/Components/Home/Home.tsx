@@ -11,6 +11,7 @@ const Home = () => {
 		animationOptions: {},
 	}); */
 	const classes = styles();
+	const moveDown = () => {};
 	return (
 		<div id="start" className={classes.wrapper}>
 			<div className={classes.container}>
@@ -47,6 +48,7 @@ const Home = () => {
 						"fas fa-long-arrow-alt-down",
 						`${classes.customization}`
 					)}
+					onClick={moveDown}
 				></span>
 			</div>
 		</div>

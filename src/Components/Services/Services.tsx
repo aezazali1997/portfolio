@@ -36,7 +36,7 @@ const Services = () => {
 	};
 
 	return (
-		<div className={classes.wrapper}>
+		<div id="services" className={classes.wrapper}>
 			<div className={classes.textContainer}>
 				<span className={classes.work}>My Work / &gt;</span>
 				<h3 className={classes.projectCreated}>Web projects Created</h3>

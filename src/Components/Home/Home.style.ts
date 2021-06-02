@@ -13,14 +13,13 @@ export const styles = createUseStyles({
     flexDirection:'column',
     alignItems:'flex-start',
     justifyContent:'center',
+    position:'relative'
   },
   timeline:{
   width:1,
-  height:"300%",
-  left:50,
-  top:"34%",
+  height:"3225px",
+  left:-30,
   position:'absolute',
-  zIndex:9,
   background:' #5918df',
 },
 bullet:{
@@ -61,6 +60,7 @@ transform:'translate(-42px, 60px) rotate(-90deg)',
     flexDirection: "column",
     marginLeft:'4rem',
     padding:'23rem 0',
+    position:'relative'
 
   },
 typing:{
@@ -193,13 +193,10 @@ fontFamily:"'Roboto', sans-serif",
     show:{
       fontSize:'1.8rem',
     },
-    timeline:{
-        left:"24%",
-        top:'38%',
-    },
     container:{
       width:'auto',
       marginLeft:'30rem',
+      position:'relative'
     }
   }
 });

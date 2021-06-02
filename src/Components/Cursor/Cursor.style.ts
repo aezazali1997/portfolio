@@ -9,6 +9,7 @@ export const styles = createUseStyles({
     to: { transform: "scale(.6)" },
   },
   OuterCursor: {
+    zIndex:103,
     width: 40,
     height: 40,
     borderRadius: "50%",

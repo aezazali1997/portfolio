@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
 import { styles } from "./Navbar.style";
-
 import classnames from "classnames";
+import { HoverContext } from "../../App";
 const Navbar = () => {
+	const value = useContext(HoverContext);
 	const [click, setClick] = useState(false);
 	const handleState = () => {
 		setClick(!click);
-		console.log(click);
 	};
 	const navbarRef = useRef<HTMLDivElement>(null);
 	useEffect(() => {
@@ -31,6 +31,7 @@ const Navbar = () => {
 	return (
 		<div ref={navbarRef} className={classes.wrapper}>
 			<div className={classes.navbar}>
+				{/* on moyse enter set the state to true which will re render the ui of mouse cursor making it disabled */}
 				<div className={classes.logo}>
 					<a href="" className={classes.link}>
 						<span>&lt;</span>
@@ -38,7 +39,7 @@ const Navbar = () => {
 						<span>/&gt;</span>
 					</a>
 				</div>
-				<div>
+				<div className={classes.navbarList}>
 					<ul
 						className={
 							click
