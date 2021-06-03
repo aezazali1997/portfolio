@@ -1,11 +1,34 @@
 import { createUseStyles } from "react-jss";
 export const styles = createUseStyles({
+  formOverLay:{
+    "&:after":{
+      zIndex:1050,
+      height:'100vh',
+      content:'""',
+      position:'fixed',
+      width:"100%",
 
+      bottom:0,
+      left:0,
+      backgroundColor:'rgba(0,0,0,.9)',
+    }
+  },
+  childOverLay:{
+    display:"flex",
+    position:'fixed',
+    right:100,
+    top:100,
+      zIndex:1150,
+
+  },
+  icon:{
+    color:'white',
+    fontSize:30,
+  },
   contact:{
     fontSize:18,
     color:"gray",
     margin:'2rem 0',
-    position:'relative',
     "&::before":{
       position:'absolute',
       content:'""',
@@ -22,7 +45,8 @@ export const styles = createUseStyles({
   container: {
     padding:'3rem 0',
     background:'#0e0d10',
-    paddingLeft:'30rem'
+    paddingLeft:'30rem',
+    position:'relative'
   },
   grid:{
     display:'grid',

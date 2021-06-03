@@ -17,30 +17,11 @@ export const styles = createUseStyles({
     position:'relative'
   },
   timeline:{
- /*  width:1,
-  maxHeight:"3215px",
-  left:-30, */
-  position: "relative",
-  maxWidth: "1200px",
-  margin:"0",
-/*   background:' #5918df', */
-"&:after":{
-  content:'""',
-  position:"absolute",
-  width:6,
-   background:' #5918df',
-   top:0,
-   bottom:0,
-    left:"50%",
-    marginLeft:'-3px',
-
-}
-},
-"@media (max-width:768px)":{
-  timeline:{
-  height:"3220px",
-
-  }
+  width:1,
+  height:"3215px",
+  left:-30,
+  position:'absolute',
+  background:' #5918df',
 },
 bullet:{
   position:'absolute',

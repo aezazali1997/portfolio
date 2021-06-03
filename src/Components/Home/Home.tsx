@@ -15,7 +15,7 @@ const Home = () => {
 		<div id="start" className={classes.wrapper}>
 			<div className={classes.container}>
 				<div className={classes.timeline}>
-					{/* <div className={classes.bullet}></div>
+					<div className={classes.bullet}></div>
 					<Link activeClass="active" to="services" smooth={true} duration={500}>
 						<div className={classes.mouse}>
 							<a href="" className={classes.mousebtn}>
@@ -23,7 +23,7 @@ const Home = () => {
 							</a>
 							<span className={classes.scroll}>Scroll</span>
 						</div>
-					</Link> */}
+					</Link>
 				</div>
 				<span className={classes.start}> Start /&gt;</span>
 				<h2 className={classes.intro}>

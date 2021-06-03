@@ -1,9 +1,24 @@
 import React from "react";
 import { styles } from "./ContactMe.style";
+import classNames from "classnames";
 const ContactMe = () => {
 	const classes = styles();
+	const showContactForm = () => {};
 	return (
 		<div className={classes.container}>
+			<div className={classes.formOverLay}>
+				<div className={classes.childOverLay}>
+					{/* for cross icon */}
+					<span className={classNames(classes.icon, "fas fa-times")}></span>
+					<div>
+						<h1 style={{ color: "white" }}>ge</h1>
+					</div>
+					<h2 style={{ color: "white" }}>sadsa</h2>
+					<h4 style={{ color: "white" }}>adsadsad</h4>
+					{/*  make a div and make it fixed */}
+					{/* make parent div fixed and all the children inherit the position of parent div */}
+				</div>
+			</div>
 			<div className={classes.contact}>
 				<span>Contact / &gt;</span>
 			</div>
@@ -33,7 +48,9 @@ const ContactMe = () => {
 					</div>
 				</div>
 				<div className={classes.containerBtn}>
-					<button className={classes.btn}>Get in Touch</button>
+					<button onClick={showContactForm} className={classes.btn}>
+						Get in Touch
+					</button>
 				</div>
 			</div>
 		</div>
