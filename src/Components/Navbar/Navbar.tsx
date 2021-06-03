@@ -3,7 +3,7 @@ import { styles } from "./Navbar.style";
 import classnames from "classnames";
 import { HoverContext } from "../../App";
 const Navbar = () => {
-	const value = useContext(HoverContext);
+	let value = useContext(HoverContext);
 	const [click, setClick] = useState(false);
 	const handleState = () => {
 		setClick(!click);
@@ -31,8 +31,15 @@ const Navbar = () => {
 	return (
 		<div ref={navbarRef} className={classes.wrapper}>
 			<div className={classes.navbar}>
-				{/* on moyse enter set the state to true which will re render the ui of mouse cursor making it disabled */}
-				<div className={classes.logo}>
+				<div
+					onMouseEnter={() => {
+						value = true;
+					}}
+					onMouseLeave={() => {
+						value = false;
+					}}
+					className={classes.logo}
+				>
 					<a href="" className={classes.link}>
 						<span>&lt;</span>
 						<span className={classes.webLogoTxt}>Aezaz</span>

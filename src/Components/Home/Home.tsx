@@ -3,26 +3,27 @@ import { styles } from "./Home.style";
 import { BiMouse } from "react-icons/bi";
 import classnames from "classnames";
 import ReactTypingEffect from "react-typing-effect";
-import useWebAnimations from "@wellyshen/use-web-animations";
-
+import { Link, animateScroll as scroll } from "react-scroll";
 const Home = () => {
 	/* 	const animateStart = useWebAnimations({
 		keyframes: {},
 		animationOptions: {},
 	}); */
 	const classes = styles();
-	const moveDown = () => {};
+
 	return (
 		<div id="start" className={classes.wrapper}>
 			<div className={classes.container}>
 				<div className={classes.timeline}>
-					<div className={classes.bullet}></div>
-					<div className={classes.mouse}>
-						<a href="" className={classes.mousebtn}>
-							<BiMouse size={25} />
-						</a>
-						<span className={classes.scroll}>Scroll</span>
-					</div>
+					{/* <div className={classes.bullet}></div>
+					<Link activeClass="active" to="services" smooth={true} duration={500}>
+						<div className={classes.mouse}>
+							<a href="" className={classes.mousebtn}>
+								<BiMouse size={25} />
+							</a>
+							<span className={classes.scroll}>Scroll</span>
+						</div>
+					</Link> */}
 				</div>
 				<span className={classes.start}> Start /&gt;</span>
 				<h2 className={classes.intro}>
@@ -42,15 +43,17 @@ const Home = () => {
 				</h2>
 				<span className={classes.show}>Let me show You...</span>
 			</div>
-			<div className={classes.down}>
-				<span
-					className={classnames(
-						"fas fa-long-arrow-alt-down",
-						`${classes.customization}`
-					)}
-					onClick={moveDown}
-				></span>
-			</div>
+
+			<Link activeClass="active" to="services" smooth={true} duration={500}>
+				<div className={classes.down}>
+					<span
+						className={classnames(
+							"fas fa-long-arrow-alt-down",
+							`${classes.customization}`
+						)}
+					></span>
+				</div>
+			</Link>
 		</div>
 	);
 };

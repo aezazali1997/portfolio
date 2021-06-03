@@ -1,7 +1,9 @@
 import { createUseStyles } from "react-jss";
 export const styles = createUseStyles({
+
   contact:{
-    color:"#eee",
+    fontSize:18,
+    color:"gray",
     margin:'2rem 0',
     position:'relative',
     "&::before":{
