@@ -1,3 +1,4 @@
+import zIndex from "@material-ui/core/styles/zIndex";
 import { createUseStyles } from "react-jss";
 export const styles = createUseStyles({
   formOverLay:{
@@ -7,24 +8,47 @@ export const styles = createUseStyles({
       content:'""',
       position:'fixed',
       width:"100%",
-
       bottom:0,
       left:0,
-      backgroundColor:'rgba(0,0,0,.9)',
+      backgroundColor:'rgba(0,0,0,1)',
+      
     }
   },
+  removeformOverLay:{
+    transform:'translate(-140%)',
+
+  },
   childOverLay:{
-    display:"flex",
     position:'fixed',
     right:100,
     top:100,
       zIndex:1150,
-
   },
+  form:{
+    display:"flex",
+    position:'fixed',
+    top:"50%",
+    left:"50%",
+    transform:"translate(-50%,-50%)",
+    zIndex:1150,
+  },
+
   icon:{
     color:'white',
     fontSize:30,
   },
+    closeBtn:{
+      outline:'none',
+      border:'none',
+      background:'transparent',
+      cursor:'pointer',
+      "& focused":{
+        outline:"none"
+      },
+      "& active":{
+        outline:"none"
+      }
+    },
   contact:{
     fontSize:18,
     color:"gray",
@@ -46,7 +70,6 @@ export const styles = createUseStyles({
     padding:'3rem 0',
     background:'#0e0d10',
     paddingLeft:'30rem',
-    position:'relative'
   },
   grid:{
     display:'grid',
