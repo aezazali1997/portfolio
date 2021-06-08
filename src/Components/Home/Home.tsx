@@ -4,23 +4,20 @@ import { BiMouse } from "react-icons/bi";
 import classnames from "classnames";
 import ReactTypingEffect from "react-typing-effect";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { timeStyles } from "../timeline.style";
 const Home = () => {
-	/* 	const animateStart = useWebAnimations({
-		keyframes: {},
-		animationOptions: {},
-	}); */
 	const classes = styles();
-
+	const _timelineClasses = timeStyles();
 	return (
-		<div id="start" className={classes.wrapper}>
+		<div id="home" className={classes.wrapper}>
 			<div className={classes.container}>
-				<div className={classes.timeline}>
+				<div className={_timelineClasses.timeline}>
 					<div className={classes.bullet}></div>
 					<Link activeClass="active" to="services" smooth={true} duration={500}>
 						<div className={classes.mouse}>
-							<a href="" className={classes.mousebtn}>
+							<span className={classes.mousebtn}>
 								<BiMouse size={25} />
-							</a>
+							</span>
 							<span className={classes.scroll}>Scroll</span>
 						</div>
 					</Link>

@@ -5,7 +5,10 @@ export const styles=createUseStyles({
     color: "#fff",
     background:'linear-gradient(to right,#1b1627,#191426)',
     padding:'2rem 0',
-    overflow:'hidden'
+    overflow:'hidden',
+    height:"100vh",
+    zIndex:99,
+    position:'relative',
   },
   textContainer:{
     marginLeft:'4rem',
@@ -26,7 +29,7 @@ export const styles=createUseStyles({
     "&::before":{
       content:'""',
        position:'absolute',
-     left:-35,
+     left:"-2.4rem",
     top: 0,
     zIndex: 10,
     width: 9,
@@ -39,48 +42,48 @@ export const styles=createUseStyles({
   projectCreated:{
     fontSize:'1.5rem',
     marginTop:'1rem',
-    color:"#bbb"
-    ,
+    color:"#bbb",
     textTransform:'capitalize'
   },
   projects:{
-    display:"flex",
-    flexDirection:'column',
-    margin:'2rem 5rem',
+    display:'grid',
+    gridTemplateColumns:'repeat(1,auto)',
+    gridGap:"2rem",
+    margin:'3rem',
   },
   singleProject:{
-    height:'25vh',
-    margin:'2rem 0',
-    position:'relative',
-    transform:'scale3d(1,1,1) perspective(700px)',
+    width:'100%',
+  
+    display:'flex',
+    justifyContent:'space-around',
+    transform:'scale3d(1,1,1)',
     "&:hover":{
       cursor:'pointer',
       transform:"scale3d(1.05,1.05,1.05)",
     }
   },
   webImage:{
-width:250,
-height:160,
-display:'block',
-position:'absolute',
-bottom:10,
-right:10,
+  width:350,
+  height:200,
   },
   projectTxt:{
     width:"60%",
-    color:'white',
+    color:'black',
     left:0,
-    top:20,
+    top:50,
     zIndex:10,
     position:'absolute',
     paddingBottom:20,
-    borderBottom:'3px solid #fff',
+    borderBottom:'3px solid #000',
   },
   number:{
     marginTop:'1rem',
     position:'absolute',
-    top:100,
+    bottom:0,
+    left:0,
+    color:"black",
   },
+
   "@media (min-width:768px)":{
    textContainer:{
     marginLeft:'30rem',
@@ -93,6 +96,25 @@ right:10,
     fontSize:250,
     color:"#221d35",
     fontWeight:900,
-  }
+   },
+   projects:{
+    gridTemplateColumns:'repeat(2,auto)',
+   
+  },
+   number:{
+     color:"white"
+   },
+   projectTxt:{
+     color:"white",
+    borderBottom:'3px solid #fff',
+
+
+   },
+   "@media (min-width:1200px)":{
+        projects:{
+    gridTemplateColumns:'repeat(3,auto)',
+   
+  },
+   }
 }
 })

@@ -2,6 +2,8 @@ import { useEffect, useRef, useState, useContext } from "react";
 import { styles } from "./Navbar.style";
 import classnames from "classnames";
 import { HoverContext } from "../../App";
+import { Link, animateScroll as scroll } from "react-scroll";
+
 const Navbar = () => {
 	let value = useContext(HoverContext);
 	const [click, setClick] = useState(false);
@@ -55,29 +57,31 @@ const Navbar = () => {
 						}
 					>
 						<li>
-							<a href="#start" target="_self" className={classes.link}>
+							<Link to="home" duration={500} activeClass="active" smooth={true}>
 								Home
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href="#services" target="_self" className={classes.link}>
+							<Link
+								to="services"
+								activeClass="active"
+								duration={500}
+								smooth={true}
+							>
 								Services
-							</a>
+							</Link>
 						</li>
+						<li>Work</li>
+						<li>About Me</li>
 						<li>
-							<a href="#work" target="_self" className={classes.link}>
-								Work
-							</a>
-						</li>
-						<li>
-							<a href="#about-me" target="_self" className={classes.link}>
-								About Me
-							</a>
-						</li>
-						<li>
-							<a href="#contact-me" className={classes.link}>
+							<Link
+								to="contact"
+								activeClass="active"
+								smooth={true}
+								duration={500}
+							>
 								Contact Me
-							</a>
+							</Link>
 						</li>
 					</ul>
 					<div className={classes.navMenu} onClick={handleState}>

@@ -5,6 +5,7 @@ export const styles = createUseStyles({
     display:'flex',
     alignItems:'center',
     paddingTop:"1.5rem",
+    position:'relative',
   },
   wrapper:{
     marginLeft:'30rem',
@@ -17,7 +18,7 @@ export const styles = createUseStyles({
     "&:before":{
       content:'""',
       position:'absolute',
-     left:-35,
+     left:"-2.4rem",
       top:5,
       zIndex: 10,
       width: 9,

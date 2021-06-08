@@ -1,49 +1,84 @@
+import { useState } from "react";
 import { styles } from "./Services.style";
 import img1 from "../../imgs/project-1.jpg";
+import img2 from "../../imgs/project-2.jpg";
+import img3 from "../../imgs/project-3.jpg";
 import { MouseEvent } from "react";
+import classNames from "classnames";
+import { timeStyles } from "../timeline.style";
+
 const Services = () => {
 	const classes = styles();
-	let lower_x = 15;
-	const hello = (e: MouseEvent<HTMLDivElement>) => {
-		let upper_x = -15;
-		let element = e.currentTarget as HTMLElement;
-		let divWidth = element.clientWidth;
-		let divHegiht = element.clientHeight;
-		let divHalfWidth = divWidth / 2;
-		let divHalfHeight = divHegiht / 2;
-		let divStartX = 73;
-		let divStartY = 752;
-		let divBottom = divStartY + divHegiht;
-		let divEnd = divStartX + divWidth;
-		let toIncrease = (e.pageY - divStartY) / 5;
-		let valueToBeAssignedX = upper_x + toIncrease;
-		if (valueToBeAssignedX < -15) {
-			valueToBeAssignedX = -15;
-		} else if (valueToBeAssignedX > 0) {
-			valueToBeAssignedX = 0;
-		}
-		// console.log(valueToBeAssignedX);
-		/* if (divBottom - e.pageY < divHalfHeight) {
-			console.log("lower then center");
-		} else {
-			console.log("upper then center");
-		}
-		if (divEnd - e.pageX < divHalfWidth) {
-			console.log("right part");
-		} else {
-			console.log("left part");
-		} */
-	};
+	const _timelineClasses = timeStyles();
 
+	const enter = (e: MouseEvent<HTMLDivElement>) => {
+		let pageYEnd = 1305;
+		let pageYStart = 1096;
+		let center = (pageYStart + pageYEnd) / 2;
+		let pexelIncrease = center / 15;
+		let degree = pexelIncrease / 3;
+		let diff = e.pageY - pageYStart;
+		let times = diff / degree;
+		let actual = 0.5 * times;
+		let test = actual * 3.83 * 2.01;
+		let calculatedAngle = -15 + test;
+		let ele = document.elementFromPoint(e.clientX, e.clientY);
+		let referenceDiv = null;
+		if (ele) {
+			if (
+				ele.tagName == "IMG" ||
+				ele.tagName == "H1" ||
+				ele.tagName == "SPAN"
+			) {
+				referenceDiv = ele.parentElement;
+			} else {
+				referenceDiv = ele;
+			}
+			console.log(referenceDiv?.firstChild?.parentElement);
+			if (referenceDiv?.firstChild?.parentElement) {
+				referenceDiv.firstChild.parentElement.style.transform =
+					"rotateY(15deg)";
+				referenceDiv.firstChild.parentElement.style.transform = `rotateX(${calculatedAngle})`;
+			}
+		}
+	};
+	const leave = (e: MouseEvent<HTMLDivElement>) => {
+		console.log("leave");
+		let referenceDiv = null;
+		let ele = document.elementFromPoint(e.clientX, e.clientY);
+		if (ele) {
+			if (
+				ele.tagName == "IMG" ||
+				ele.tagName == "H1" ||
+				ele.tagName == "SPAN"
+			) {
+				referenceDiv = ele.parentElement;
+			} else {
+				referenceDiv = ele;
+			}
+			console.log(referenceDiv?.firstChild?.parentElement);
+			if (referenceDiv?.firstChild?.parentElement) {
+				referenceDiv.firstChild.parentElement.style.transform = "rotateY(0deg)";
+				referenceDiv.firstChild.parentElement.style.transform = `rotateX(0deg)`;
+			}
+		}
+	};
 	return (
 		<div id="services" className={classes.wrapper}>
+			<div
+				className={classNames(_timelineClasses.alt, _timelineClasses.timeline)}
+			></div>
 			<div className={classes.textContainer}>
 				<span className={classes.work}>My Work / &gt;</span>
 				<h3 className={classes.projectCreated}>Web projects Created</h3>
 				<span className={classes.web}>WEB</span>
 			</div>
 			<div id="projects" className={classes.projects}>
-				<div onMouseMove={hello} className={classes.singleProject}>
+				<div
+					onMouseEnter={enter}
+					onMouseLeave={leave}
+					className={classes.singleProject}
+				>
 					<h1 className={classes.projectTxt}>Web project</h1>
 					<img
 						className={classes.webImage}
@@ -60,7 +95,7 @@ const Services = () => {
 					<h1 className={classes.projectTxt}>Mobile project</h1>
 					<img
 						className={classes.webImage}
-						src={img1}
+						src={img2}
 						alt="project national web"
 					/>
 					<span className={classes.number}>
@@ -73,7 +108,7 @@ const Services = () => {
 					<h1 className={classes.projectTxt}>IOS project</h1>
 					<img
 						className={classes.webImage}
-						src={img1}
+						src={img3}
 						alt="project national web"
 					/>
 					<span className={classes.number}>

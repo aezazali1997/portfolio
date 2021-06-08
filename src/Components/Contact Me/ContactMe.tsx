@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { styles } from "./ContactMe.style";
 import classNames from "classnames";
+import { timeStyles } from "../timeline.style";
 
 import {
 	Card,
@@ -10,16 +11,11 @@ import {
 	TextField,
 	Button,
 } from "@material-ui/core";
-import {
-	makeStyles,
-	withStyles,
-	Theme,
-	createMuiTheme,
-} from "@material-ui/core";
-import { grey, green } from "@material-ui/core/colors";
+import { makeStyles, withStyles, Theme } from "@material-ui/core";
+import { grey } from "@material-ui/core/colors";
 
 const ContactMe = () => {
-	const [close, setClose] = useState<boolean>(true);
+	const [close, setClose] = useState<boolean>(false);
 
 	const matUseStyles = makeStyles((theme: Theme) => ({
 		card: {
@@ -46,8 +42,10 @@ const ContactMe = () => {
 			transform: "translateX(-50%)",
 		},
 	}));
+
 	const _classes = styles();
 	const _matClases = matUseStyles();
+	const _timelineClasses = timeStyles();
 
 	const showContactForm = () => {
 		setClose(true);
@@ -55,11 +53,6 @@ const ContactMe = () => {
 	const closeOverLay = () => {
 		setClose(false);
 	};
-	const styles = (theme: Theme) => ({
-		multilineColor: {
-			color: "red",
-		},
-	});
 	const CustomButton = withStyles((theme: Theme) => ({
 		root: {
 			color: grey[100],
@@ -72,8 +65,42 @@ const ContactMe = () => {
 		},
 	}))(Button);
 
+	const CustomTextField = withStyles({
+		root: {
+			"& input": {
+				color: "#fff",
+			},
+			"& input + fieldset": {
+				borderColor: "gray",
+				borderWidth: 2,
+			},
+			"& input:valid:hover + fieldset": {
+				borderColor: "gray",
+				borderWidth: 2,
+			},
+
+			"& input:valid:focus + fieldset": {
+				padding: "4px !important", // override inline-style
+			},
+		},
+	})(TextField);
+	const CustomMultiLine = withStyles({
+		root: {
+			"& textarea": {
+				color: "#fff !important",
+			},
+			"& .MuiOutlinedInput-notchedOutline": {
+				borderColor: "gray !important",
+			},
+		},
+	})(TextField);
+
 	return (
-		<div className={_classes.container}>
+		<div id="contact" className={_classes.container}>
+			<div
+				className={classNames(_timelineClasses.timeline, _timelineClasses.alt)}
+			></div>
+
 			<div
 				className={classNames(
 					_classes.formOverLay,
@@ -95,22 +122,35 @@ const ContactMe = () => {
 							>
 								Get in Touch with Me!
 							</Typography>
-							<TextField
+							<CustomTextField
 								variant="outlined"
 								InputLabelProps={{
 									style: { color: "#fff" },
 								}}
 								className={classNames(_matClases.textField)}
 								label="Name"
-							></TextField>
-							<TextField
+							/>
+							<CustomTextField
 								variant="outlined"
 								InputLabelProps={{
-									style: { color: "#fff", borderColor: "#fff" },
+									style: { color: "#fff" },
 								}}
-								label="Eamil"
+								label="Email"
 								className={classNames(_matClases.textField)}
-							></TextField>
+							/>
+							<CustomMultiLine
+								variant="outlined"
+								InputLabelProps={{
+									style: {
+										color: "#fff",
+										borderColor: "gray",
+									},
+								}}
+								label="Message"
+								rows={4}
+								multiline
+								className={classNames(_matClases.textField)}
+							/>
 						</CardContent>
 						<CardActions>
 							<CustomButton

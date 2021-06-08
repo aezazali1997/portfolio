@@ -1,4 +1,3 @@
-import zIndex from "@material-ui/core/styles/zIndex";
 import { createUseStyles } from "react-jss";
 export const styles = createUseStyles({
   formOverLay:{
@@ -15,7 +14,7 @@ export const styles = createUseStyles({
     }
   },
   removeformOverLay:{
-    transform:'translate(-140%)',
+    transform:'translate(-240%)',
 
   },
   childOverLay:{
@@ -53,16 +52,17 @@ export const styles = createUseStyles({
     fontSize:18,
     color:"gray",
     margin:'2rem 0',
+    position:'relative',
     "&::before":{
       position:'absolute',
       content:'""',
-      top:0,
-      left:-35,
       background:"#1b191e",
       borderRadius:"50%",
       width:9,
       height:9,
       border: "2px solid #5918df",
+      zIndex:10,
+      left:"-2.4rem",
     }
   },
 
@@ -70,6 +70,7 @@ export const styles = createUseStyles({
     padding:'3rem 0',
     background:'#0e0d10',
     paddingLeft:'30rem',
+    position:'relative'
   },
   grid:{
     display:'grid',

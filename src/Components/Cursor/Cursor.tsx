@@ -16,12 +16,18 @@ const Cursor = () => {
 			const mouseX = pageX - pointed / 2;
 			const mouseY = pageY - pointed / 2;
 			if (point.current?.style) {
-				if (tag === "A" || tag === "BUTTON" || tag === "svg" || tag === "UL") {
+				if (
+					tag === "A" ||
+					tag === "a" ||
+					tag === "BUTTON" ||
+					tag === "svg" ||
+					tag === "UL"
+				) {
 					point.current.style.display = "none";
 				} else {
 					point.current.style.display = "table";
-					/* point.current.style.top = `${mouseY}px`; */
-					/* point.current.style.left = `${mouseX}px`; */
+					/* 		point.current.style.top = `${mouseY}px`;
+					point.current.style.left = `${mouseX}px`; */
 				}
 			}
 		});

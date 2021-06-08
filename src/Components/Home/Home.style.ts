@@ -14,14 +14,14 @@ export const styles = createUseStyles({
     flexDirection:'column',
     alignItems:'flex-start',
     justifyContent:'center',
-    position:'relative'
   },
   timeline:{
   width:1,
-  height:"3215px",
+  height:"3200px",
   left:-30,
   position:'absolute',
   background:' #5918df',
+  zIndex:100,
 },
 bullet:{
   position:'absolute',
@@ -60,7 +60,6 @@ transform:'translate(-42px, 60px) rotate(-90deg)',
     display: "flex",
     flexDirection: "column",
     marginLeft:'4rem',
-    position:'relative'
 
   },
 typing:{
@@ -196,7 +195,6 @@ fontFamily:"'Roboto', sans-serif",
     container:{
       width:'auto',
       marginLeft:'30rem',
-      position:'relative'
     },
     wrapper:{
       height:'940px',
