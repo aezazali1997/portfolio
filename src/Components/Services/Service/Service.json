@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "b fa-react",
+    "title": "React Development",
+    "description": "Eligent Looking Websites with Eye catchy UI/UX"
+  },
+  {
+    "icon": "b fa-html5",
+    "title": "HTML Websites",
+    "description": "Website written in HTML,CSS and Javascript"
+  },
+  {
+    "icon": "b fa-wordpress",
+    "title": "Wordpress Development",
+    "description": "Blog type websites,ecommerce websites,online store and much more"
+  },
+    {
+    "icon": "b fa-angular",
+    "title": "Angular Development",
+    "description": "Any type of login website or information rich website"
+  },
+    {
+    "icon": "b fa-css3-alt",
+    "title": "PSD to HTML",
+    "description": "Good looking websites"
+  },
+   {
+    "icon": "s fa-bug",
+    "title": "Debugging",
+    "description": "Trouble shooting issues and bugs from websites"
+  }
+]
