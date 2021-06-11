@@ -49,7 +49,7 @@
   },
   "scripts": {
     "start": "craco start --config config/craco.config.js",
-    "build": "craco build",
+    "build": "craco build --config config/craco.config.js",
     "test": "craco test",
     "eject": "craco eject",
     "lint": "eslint --ext .ts,.tsx ./"
