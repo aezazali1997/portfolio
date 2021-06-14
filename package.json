@@ -30,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
     "@wellyshen/use-web-animations": "^0.7.4",
+    "axios": "^0.21.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "classnames": "^2.3.1",
     "eslint": "^7.28.0",

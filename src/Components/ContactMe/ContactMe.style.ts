@@ -102,6 +102,10 @@ export const styles = createUseStyles({
     borderRadius: '20rem',
     '-webkit-box-shadow': '0px 11px 21px -4px rgb(89 22 223)',
   },
+  blog:{
+    background:'#5918df',
+    borderRadius:500,
+  },
   '@media (max-width:768px)': {
     container: {
       paddingLeft: '4rem',
