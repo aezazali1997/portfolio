@@ -1,17 +1,20 @@
 import { createUseStyles } from 'react-jss'
-import background from '@images/bGround.jpg'
 export const styles = createUseStyles({
   wrapper: {
-    width: 'auto',
+    width: '100%',
     height: '930px',
-    color: '#fff',
-    background: `url(${background})`,
-    backgroundPosition: 'center',
-    backgroundRepeat: 'repeat',
+    color: '#ddd',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'center',
+    position:'relative',
+  },
+  img:{
+    width: 'inherit',
+    height: 'inherit',
+    position:'absolute',
+    backgroundSize:"cover",
   },
   timeline: {
     width: 1,
@@ -100,6 +103,7 @@ export const styles = createUseStyles({
     marginTop: '2rem',
     fontSize: '2.5rem',
     fontWeight: 800,
+    color:"inherit",
     position: 'relative',
     '&:after': {
       content: '""',

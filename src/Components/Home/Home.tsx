@@ -5,11 +5,14 @@ import classnames from 'classnames'
 import ReactTypingEffect from 'react-typing-effect'
 import { Link } from 'react-scroll'
 import { timeStyles } from './Home.style'
+import background from '@images/bGround.jpg'
+
 const Home = () => {
   const classes = styles()
   const _timelineClasses = timeStyles()
   return (
     <div id="home" className={classes.wrapper}>
+      <img src={background} alt="" className={classes.img} />
       <div className={classes.container}>
         <div className={_timelineClasses.timeline}>
           <div className={classes.bullet}></div>
