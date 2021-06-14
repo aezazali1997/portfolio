@@ -12,7 +12,7 @@ const Home = () => {
   const _timelineClasses = timeStyles()
   return (
     <div id="home" className={classes.wrapper}>
-      <img src={background} alt="" className={classes.img} />
+      <img src={background} alt="aezaz portfolio" className={classes.img} />
       <div className={classes.container}>
         <div className={_timelineClasses.timeline}>
           <div className={classes.bullet}></div>
