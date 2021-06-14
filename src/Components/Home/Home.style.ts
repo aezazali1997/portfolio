@@ -3,7 +3,7 @@ export const styles = createUseStyles({
   wrapper: {
     width: '100%',
     height: '930px',
-    color: '#ddd',
+    color: '#0f0d18',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -103,7 +103,7 @@ export const styles = createUseStyles({
     marginTop: '2rem',
     fontSize: '2.5rem',
     fontWeight: 800,
-    color:"inherit",
+    color:"#ddd",
     position: 'relative',
     '&:after': {
       content: '""',
@@ -148,6 +148,7 @@ export const styles = createUseStyles({
     marginTop: '.7rem',
     fontSize: '2rem',
     fontWeight: 800,
+    color:"#ddd",
     position: 'relative',
     '&:after': {
       content: '""',
