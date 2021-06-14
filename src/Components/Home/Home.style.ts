@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss'
-import background from '@images/background-home.webp'
+import background from '@images/bGround.jpg'
 export const styles = createUseStyles({
   wrapper: {
     width: 'auto',
