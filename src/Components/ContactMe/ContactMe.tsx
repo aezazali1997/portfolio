@@ -199,7 +199,7 @@ const ContactMe: React.FC<Props> = observer(({ form }) => {
           <div>
             <a href="https://www.zonatsolutions.com/" target="_blank" rel="noreferrer">
               <img className={_classes.blog} src={Zonat} alt="Zonat solutions logo" />
-              <span>Zonat Solutions</span>
+              <span className={_classes.zonat}>Zonat Solutions</span>
             </a>
           </div>
           <div>

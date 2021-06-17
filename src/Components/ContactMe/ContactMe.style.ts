@@ -70,6 +70,9 @@ export const styles = createUseStyles({
     paddingLeft: '30rem',
     position: 'relative',
   },
+  zonat:{
+    marginLeft:".5rem",
+  },
   grid: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
@@ -80,6 +83,9 @@ export const styles = createUseStyles({
         color: '#5918df',
         fontSize: 18,
         cursor: 'none',
+        "& span":{
+          marginRight:".5rem",
+        },
       },
     },
   },
