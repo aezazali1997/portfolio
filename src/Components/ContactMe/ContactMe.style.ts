@@ -30,7 +30,6 @@ export const styles = createUseStyles({
     transform: 'translate(-50%,-50%)',
     zIndex: 1150,
   },
-
   icon: {
     color: 'white',
     fontSize: 30,
@@ -110,5 +109,12 @@ export const styles = createUseStyles({
     container: {
       paddingLeft: '4rem',
     },
+    form:{
+      left:"40%"
+    },
+    childOverLay:{
+      top:200,
+      right:50,
+    }
   },
 })

@@ -5,6 +5,7 @@ import ContactMe from '@components/ContactMe/ContactMe'
 import Cursor from '@components/Cursor/Cursor'
 import Navbar from '@components/Navbar/Navbar'
 import Services from '@components/Services/Services'
+import { form } from './Services/formValidation';
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
       <Home />
       <Services />
       <AboutMe />
-      <ContactMe />
+      <ContactMe form={form} />
     </div>
   )
 }

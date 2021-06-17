@@ -27,6 +27,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/react-scroll": "^1.8.2",
     "@types/react-typing-effect": "^2.0.1",
+    "@types/validatorjs": "^3.15.0",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
     "@wellyshen/use-web-animations": "^0.7.4",
@@ -35,6 +36,9 @@
     "classnames": "^2.3.1",
     "eslint": "^7.28.0",
     "eslint-plugin-react": "^7.24.0",
+    "mobx": "^6.3.2",
+    "mobx-react": "^7.2.0",
+    "mobx-react-form": "^3.1.0",
     "react": "^17.0.2",
     "react-animated-cursor": "^2.1.8",
     "react-dom": "^17.0.2",
@@ -46,6 +50,7 @@
     "react-typing-effect": "^2.0.5",
     "typescript": "^4.1.2",
     "typewriter-effect": "^2.17.0",
+    "validatorjs": "^3.22.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

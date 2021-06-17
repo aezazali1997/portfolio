@@ -1,10 +1,11 @@
-
 import React, { useState } from 'react'
 import { styles } from './ContactMe.style'
 import classNames from 'classnames'
 import { timeStyles } from '@components/Home/Home.style'
 import Zonat from '@images/zonsol.png';
-import axios from 'axios';
+import { observer } from 'mobx-react';
+//@ts-ignore
+import MobxReactForm from 'mobx-react-form';
 import {
   Card,
   CardContent,
@@ -16,69 +17,46 @@ import {
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core'
 
-const ContactMe = () => {
-
+type Props = {
+  form: MobxReactForm
+}
+const ContactMe: React.FC<Props> = observer(({ form }) => {
   const [close, setClose] = useState<boolean>(false);
-
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
-
-  const handleData = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    axios({
-      method: "POST",
-      url: "http://localhost:3002/send",
-      data: { name, email, message }
-    }).then((response) => {
-      if (response.data.status === 'success') {
-        alert("Message Sent.");
-        resetForm();
-        setClose(false)
-      }
-      else if (response.data.status === 'fail') {
-        alert("Message failed to send.")
-      }
-    })
-  }
-  const resetForm = () => {
-    setName('');
-    setEmail('');
-    setMessage('');
-
-  }
-
   const matUseStyles = makeStyles(() => ({
     card: {
-      width: '100%',
+      width: 400,
       background: 'black',
       padding: '1rem 3rem',
-      border: '1px solid gray',
+      border: '1px solid gray'
     },
     header: {
       color: '#fff',
       paddingBottom: 10,
       borderBottom: '1px solid #fff',
       marginBottom: '1rem',
-      textAlign: 'center',
+      textAlign: 'center'
     },
     labelColor: {
       color: '#fff !important',
     },
     input: {
-      color: '#fff',
+      color: '#fff'
     },
     notchedOutline: {
       borderWidth: '1px',
-      borderColor: 'gray !important'
+      borderColor: 'gray',
+    },
+    root: {
+      "&:hover:not($error) $notchedOutline": {
+        borderColor: "gray"
+      }
     },
     btn: {
       background: "transparent",
-      color: "#fff",
+      color: "#fff"
     },
     btnOutline: {
-      borderColor: "1px solid red !important",
-
+      borderColor: "1px solid red !important"
     }
   }))
 
@@ -95,110 +73,90 @@ const ContactMe = () => {
 
   return (
     <div id="contact" className={_classes.container}>
-      <div
-        className={classNames(_timelineClasses.timeline, _timelineClasses.alt)}
-      ></div>
+      <div className={classNames(_timelineClasses.timeline, _timelineClasses.alt)}></div>
 
       <div
-        className={classNames(
-          _classes.formOverLay,
-          close ? null : `${_classes.removeformOverLay}`,
-        )}
-      >
+        className={classNames(_classes.formOverLay, close
+          ? null
+          : `${_classes.removeformOverLay}`)}>
         <div className={_classes.childOverLay}>
           <button className={_classes.closeBtn} onClick={closeOverLay}>
             <span className={classNames(_classes.icon, 'fas fa-times')}></span>
           </button>
         </div>
         <div className={_classes.form}>
-          <form onSubmit={handleData} method="POST">
+          <form onSubmit={form.onSubmit} method="POST">
             <Card className={_matClases.card}>
               <CardContent>
-                <Typography
-                  className={_matClases.header}
-                  variant="h5"
-                  component="h1"
-                >
+                <Typography className={_matClases.header} variant="h5" component="h1">
                   Get in Touch with Me!
                 </Typography>
                 <Box mb="1rem">
                   <TextField
-                    required
                     variant="outlined"
-                    label="Name"
-                    type="text"
-                    value={name}
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
 
+                    {...form.$('name').bind()}
+                    error={!!form.$('name').error}
+                    helperText={form.$('name').error}
                     InputLabelProps={{
                       classes: {
-                        root: _matClases.labelColor,
+                        root: _matClases.labelColor
                       }
                     }}
                     InputProps={{
                       className: _matClases.input,
                       classes: {
+                        root: _matClases.root,
                         notchedOutline: _matClases.notchedOutline,
                       }
                     }}
-                    fullWidth={true}
-                  />
+                    fullWidth={true} />
                 </Box>
                 <Box mb="1rem">
                   <TextField
-                    required
                     fullWidth={true}
                     variant="outlined"
-                    label="Email"
-                    value={email}
-                    type="email"
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
+
+                    {...form.$('email').bind()}
+                    error={!!form.$('email').error}
+                    helperText={form.$('email').error}
                     InputLabelProps={{
                       classes: {
-                        root: _matClases.labelColor,
+                        root: _matClases.labelColor
                       }
                     }}
                     InputProps={{
                       className: _matClases.input,
                       classes: {
-                        notchedOutline: _matClases.notchedOutline,
+                        root: _matClases.root,
+                        notchedOutline: _matClases.notchedOutline
                       }
-                    }}
-                  /> </Box>
+                    }} />
+                </Box>
                 <Box width={1}>
                   <TextField
-                    required
                     fullWidth={true}
                     variant="outlined"
-                    label="Message"
-                    value={message}
-                    type="text"
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
+                    {...form.$('message').bind()}
+                    error={!!form.$('message').error}
+                    helperText={form.$('message').error}
                     rows={4}
                     multiline
                     InputLabelProps={{
                       classes: {
-                        root: _matClases.labelColor,
+                        root: _matClases.labelColor
                       }
                     }}
                     InputProps={{
                       className: _matClases.input,
                       classes: {
-                        notchedOutline: _matClases.notchedOutline,
+                        root: _matClases.root,
+                        notchedOutline: _matClases.notchedOutline
                       }
-                    }}
-                  /></Box>
+                    }} /></Box>
               </CardContent>
               <CardActions >
-                <Box
-                  mx="auto"
-                >
+                <Box mx="auto">
                   <Button
                     color="primary"
                     variant="outlined"
@@ -208,8 +166,7 @@ const ContactMe = () => {
                     classes={{
                       root: _matClases.btn,
                       outlinedPrimary: _matClases.btnOutline
-                    }}
-                  >
+                    }}>
                     Send
                   </Button>
                 </Box>
@@ -226,25 +183,27 @@ const ContactMe = () => {
         <div className={_classes.grid}>
           <div>
             <a href="https://github.com/aezazali1997" target="_blank" rel="noreferrer">
-              <span className="fab fa-github"></span> <span>Github</span>
-            </a>
-          </div>
-          <div>
-            <a href="https://www.facebook.com/aezaz.ali.1997" target="_blank" rel="noreferrer">
-              <span className="fab fa-facebook"></span> <span>Facebook</span>
-            </a>
-          </div>
-          <div>
-            <a href="https://www.zonatsolutions.com/" target="_blank" rel="noreferrer">
-              <img className={_classes.blog} src={Zonat} alt="Zonat solutions logo" /> <span>Zonat Solutions</span>
+              <span className="fab fa-github"></span>
+              <span>Github</span>
             </a>
           </div>
           <div>
             <a
-              href="mailto:aezazali.pro@gmail.com"
-              target="_blank "
-              rel="noreferrer"
-            >
+              href="https://www.facebook.com/aezaz.ali.1997"
+              target="_blank"
+              rel="noreferrer">
+              <span className="fab fa-facebook"></span>
+              <span>Facebook</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.zonatsolutions.com/" target="_blank" rel="noreferrer">
+              <img className={_classes.blog} src={Zonat} alt="Zonat solutions logo" />
+              <span>Zonat Solutions</span>
+            </a>
+          </div>
+          <div>
+            <a href="mailto:aezazali.pro@gmail.com" target="_blank " rel="noreferrer">
               <span className="fas fa-envelope-open-text"></span>{' '}
               <span>Gmail</span>
             </a>
@@ -258,6 +217,6 @@ const ContactMe = () => {
       </div>
     </div >
   )
-}
+});
 
 export default ContactMe

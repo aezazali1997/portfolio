@@ -25,5 +25,6 @@ module.exports = {
     "no-trailing-spaces": [2, { "skipBlankLines": false }],
     "no-multiple-empty-lines": [2, { "max": 2 }],
     "react/prop-types": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
   },
 }
