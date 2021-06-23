@@ -1,22 +1,23 @@
-import React from 'react'
-import Home from '@components/Home/Home'
-import AboutMe from '@components/AboutMe/AboutMe'
-import ContactMe from '@components/ContactMe/ContactMe'
-import Cursor from '@components/Cursor/Cursor'
-import Navbar from '@components/Navbar/Navbar'
-import Services from '@components/Services/Services'
+import React, { Suspense, lazy } from 'react'
 import { form } from './Services/formValidation';
+const Home = lazy(() => import('@components/Home/Home'));
+const AboutMe = lazy(() => import('@components/AboutMe/AboutMe'));
+const ContactMe = lazy(() => import('@components/ContactMe/ContactMe'));
+const Cursor = lazy(() => import('@components/Cursor/Cursor'));
+const Navbar = lazy(() => import('@components/Navbar/Navbar'))
+const Services = lazy(() => import('@components/Services/Services'));
+import Loading from '@components/Loading/Loading';
 
 const App = () => {
   return (
-    <div>
+    <Suspense fallback={<Loading />}>
       <Cursor />
       <Navbar />
       <Home />
       <Services />
       <AboutMe />
       <ContactMe form={form} />
-    </div>
+    </Suspense>
   )
 }
 

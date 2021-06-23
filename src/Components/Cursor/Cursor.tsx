@@ -6,8 +6,8 @@ const Cursor = () => {
     const pointed = point.current?.clientWidth || 0
     window.addEventListener('mousemove', (e: MouseEvent) => {
       const { pageX, pageY } = e
-      const mouseX = pageX - pointed / 2
-      const mouseY = pageY - pointed / 2
+      const mouseX = pageX - pointed / 2 - 20; // subtracting the values so that the cursor is exactly at the center of mouse
+      const mouseY = pageY - pointed / 2 - 20;
 
       if (point.current?.style) {
         point.current.style.top = `${mouseY}px`
