@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Roboto Condensed', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+  font-family: 'Souge','Roboto Condensed', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,4 +13,7 @@ code {
 * {
   margin: 0;
   padding: 0;
+}
+html{
+  
 }
