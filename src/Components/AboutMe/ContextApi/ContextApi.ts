@@ -3,39 +3,39 @@ import { IData } from '@interfaces'
 /* refinments of modals about objects */
 type Props = {
   class: {
-    name: string
-    comment: string
+    name: string,
+    comment: string,
     const: {
-      name: string
+      name: string,
       variables: {
-        birthDay: string
-        age: string
-        hobby: string
-        personality: string
+        birthDay: string,
+        age: string,
+        hobby: string,
+        personality: string,
       }
-    }
+    },
 
     method1: {
-      name: string
+      name: string,
       fields: IData[]
-    }
+    },
 
     method2: {
-      name: string
+      name: string,
       exp: {
-        company: string
-        skills: string[]
-        time: string
+        company: string,
+        skills: string[],
+        time: string,
       }
-    }
+    },
     method3: {
-      name: string
+      name: string,
       edu: {
-        university: string
-        degree: string
-        city: string
-        started: string
-        graduated: string
+        university: string,
+        degree: string,
+        city: string,
+        started: string,
+        graduated: string,
       }
     }
   }
