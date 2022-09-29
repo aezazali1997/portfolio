@@ -14,6 +14,8 @@ code {
   margin: 0;
   padding: 0;
 }
-html{
-  
+
+/* to remove the web scrollbar */
+::-webkit-scrollbar{
+  display: none;
 }

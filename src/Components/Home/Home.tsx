@@ -33,7 +33,11 @@ const Home = () => {
           i <em>design</em> and <span className={classes.develop}>develop</span>
           <span className={classes.typing}>
             <ReactTypingEffect
-              text={['Web Apps', 'Progressive Web App', 'Complete websites']}
+              text={[
+                'React Applications',
+                'FullStack Websites',
+                'Backend APIs',
+              ]}
               speed={200}
               eraseDelay={2000}
               eraseSpeed={100}
