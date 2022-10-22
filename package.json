@@ -57,12 +57,57 @@
     "validatorjs": "^3.22.1",
     "web-vitals": "^1.0.1"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/index.tsx",
+      "!src/serviceWorker.ts",
+      "!src/reportWebVitals.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "./src/*/*.types.{ts,tsx}",
+      "./src/index.tsx",
+      "./src/serviceWorker.ts"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text-summary",
+      "clover"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 95,
+        "branches": 95,
+        "lines": 95,
+        "functions": 95
+      }
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+      "src/(.*)$": "<rootDir>/src/$1"
+    }
+  },
   "scripts": {
     "start": "craco start --config config/craco.config.js",
     "build": "craco build --config config/craco.config.js",
     "test": "craco test --config config/craco.config.js",
     "eject": "craco eject",
-    "lint": "eslint --ext .ts,.tsx ./"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+    "format": "prettier --write src/**/*.{ts,tsx,scss,css,json}",
+    "isready": "npm run format && npm run lint && npm run test:coverage && npm run build"
   },
   "browserslist": {
     "production": [
@@ -77,8 +122,11 @@
     ]
   },
   "devDependencies": {
-    "@types/enzyme": "^3.10.8",
+    "@types/enzyme": "^3.10.11",
     "babel-eslint": "^10.1.0",
-    "prettier": "2.3.1"
+    "enzyme-to-json": "^3.6.2",
+    "jest-fetch-mock": "^3.0.3",
+    "prettier": "2.3.1",
+    "ts-jest": "^27.1.3"
   }
 }
