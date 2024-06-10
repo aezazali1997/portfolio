@@ -1,0 +1,33 @@
+[
+  {
+    "icon": "b fa-node-js",
+    "title": "Next.js Development",
+    "description": "Crafting optimized, high-performance web applications using Next.js."
+  },
+  {
+    "icon": "b fa-react",
+    "title": "React Development",
+    "description": "Sophisticated websites with captivating UI/UX designs."
+  },
+  {
+    "icon": "b fa-node",
+    "title": "FullStak Application Development",
+    "description": "End to End Complete functionalities with MERN Stack"
+  },
+  {
+    "icon": "b fa-html5",
+    "title": "HTML Templates",
+    "description": "Creating websites using HTML, CSS, and JavaScript for seamless online experiences."
+  },
+  {
+    "icon": "b fa-css3-alt",
+    "title": "PSD to HTML",
+    "description": "Transforming intricate UI/UX designs into animated websites."
+  },
+
+  {
+    "icon": "s fa-bug",
+    "title": "Debugging",
+    "description": "Resolving issues and bugs to ensure seamless website functionality."
+  }
+]
