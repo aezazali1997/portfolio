@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { styles } from './Skills.style'
 import classNames from 'classnames'

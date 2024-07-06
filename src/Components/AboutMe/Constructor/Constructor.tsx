@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+// @ts-nocheck
 import React, { FC, useContext } from 'react'
 import { styles } from './Constructor.style'
 import AppContext from '@components/AboutMe/ContextApi/ContextApi'

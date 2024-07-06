@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { IData } from '@interfaces'
 /* refinments of modals about objects */

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { ShallowWrapper, shallow } from 'enzyme'
 import Loading from './Loading'

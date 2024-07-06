@@ -1,4 +1,5 @@
-// import React, { useState, useCallback, useRef, useEffect } from 'react'
+// // @ts-nocheck
+import React, { useState, useCallback, useRef, useEffect } from 'react'
 export {}
 // import { styles } from './ScrollBar.style'
 // const SCROLL_BOX_MIN_HEIGHT = 20

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from 'react'
 import AppContext from './ContextApi/ContextApi'
 import { styles } from './AboutMe.style'

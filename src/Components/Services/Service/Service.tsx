@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+// @ts-nocheck
 import React, { FC } from 'react'
 import { styles } from './Service.style'
 

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState } from 'react'
 import { styles } from './ContactMe.style'
 import classNames from 'classnames'

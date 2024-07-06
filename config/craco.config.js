@@ -1,4 +1,9 @@
 module.exports = {
+  style: {
+    postcss: {
+      plugins: [require('tailwindcss')('./tailwind.config.js')],
+    },
+  },
   babel: {
     presets: ['@babel/preset-react', '@babel/preset-typescript'],
     plugins: [

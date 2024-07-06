@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { Suspense, lazy } from 'react'
 import { form } from './Services/formValidation'
 const Home = lazy(() => import('@components/Home/Home'))

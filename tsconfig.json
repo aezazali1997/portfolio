@@ -29,7 +29,7 @@
   ],
   "include": [
     "src"
-  ],
+, "ui"  ],
   "ts-node": {
     "pretty": true,
     "transpileOnly": true

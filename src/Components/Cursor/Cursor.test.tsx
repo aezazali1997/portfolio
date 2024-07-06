@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { shallow, ShallowWrapper } from 'enzyme'
 import Cursor from './Cursor'

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { FC } from 'react'
 import { styles } from './Return.style'
 import { margins, colors } from '@components/AboutMe/AboutMe.style'

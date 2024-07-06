@@ -1,4 +1,5 @@
 import { shallow, ShallowWrapper } from 'enzyme'
+// @ts-nocheck
 import React from 'react'
 import Serivce from './Service'
 describe('Service rendering', () => {

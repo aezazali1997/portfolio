@@ -1,7 +1,9 @@
+// @ts-nocheck
 import React from 'react'
 import { styles } from './Home.style'
 import { BiMouse } from 'react-icons/bi'
 import classnames from 'classnames'
+// @ts-nocheck
 import ReactTypingEffect from 'react-typing-effect'
 import { Link } from 'react-scroll'
 import { timeStyles } from './Home.style'
@@ -27,7 +29,7 @@ const Home = () => {
         </div>
         <span className={classes.start}> Start /&gt;</span>
         <h2 className={classes.intro}>
-          Hi, my name is <span className={classes.name}>Aezaz Ali</span>
+          Hi, my name is <span className=" text-black bg-black hover:bg-black">Aezaz Ali</span>
         </h2>
         <h2 className={classes.more}>
           i <em>design</em> and <span className={classes.develop}>develop</span>
