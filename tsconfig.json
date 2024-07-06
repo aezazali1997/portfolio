@@ -28,8 +28,9 @@
     "webpack"
   ],
   "include": [
-    "src"
-, "ui"  ],
+    "src",
+    "ui"
+  ],
   "ts-node": {
     "pretty": true,
     "transpileOnly": true
