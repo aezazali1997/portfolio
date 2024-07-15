@@ -29,7 +29,7 @@ const Home = () => {
         </div>
         <span className={classes.start}> Start /&gt;</span>
         <h2 className={classes.intro}>
-          Hi, my name is <span className="bg-white">Aezaz Ali</span>
+          Hi, my name is <span className={classes.name}>Aezaz Ali</span>
         </h2>
         <h2 className={classes.more}>
           i <em>design</em> and <span className={classes.develop}>develop</span>
