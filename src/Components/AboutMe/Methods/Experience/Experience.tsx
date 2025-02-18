@@ -22,7 +22,8 @@ const Experience = () => {
         <span className={_colors.specialKeyword}> =&gt; </span>
         &#123;
       </span>
-      <Return experience={method.exp} />
+      <Return experiences={method.exp} />
+      <span className={_classes.margin1}>&#93;</span><br />
     </div>
   )
 }

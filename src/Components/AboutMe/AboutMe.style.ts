@@ -13,7 +13,13 @@ export const styles = createUseStyles({
   },
   title: {
     color: 'gray',
-    fontSize: 18,
+    fontSize: 34,
+    fontWeight: 700,
+    marginBottom: '1rem',
+    textAlign: 'center',
+    '@media (max-width:768px)': {
+      fontSize: 18,
+    },
     position: 'relative',
     '&:before': {
       content: '""',
@@ -51,7 +57,7 @@ export const colors = createUseStyles({
     color: '#25cca7 ',
   },
   comment: {
-    color: '#2c6e29 !important',
+    color: '#41A33C !important',
   },
   cons: {
     color: '#b6c480',
