@@ -26,7 +26,7 @@ type Props = {
         company: string,
         skills: string[],
         time: string,
-      }
+      }[]
     },
     method3: {
       name: string,
@@ -65,11 +65,11 @@ const defaultValue: Props = {
 
     method2: {
       name: '',
-      exp: {
+      exp:[ {
         company: '',
         skills: [],
         time: '',
-      },
+      }],
     },
     method3: {
       name: '',

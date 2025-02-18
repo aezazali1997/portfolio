@@ -6,7 +6,7 @@ export const styles = createUseStyles({
   },
   '@keyframes effect2': {
     from: { transform: 'scale(1)' },
-    to: { transform: 'scale(.6)' },
+    to: { transform: 'scale(.8)' },
   },
   OuterCursor: {
     pointerEvents: 'none',

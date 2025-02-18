@@ -21,7 +21,7 @@ const AboutMe: FC = () => {
           )}
         ></div>
         <div className={classes.wrapper}>
-          <div className={classes.title}>About / &gt;</div>
+          <div className={classes.title}>&lt; About / &gt;</div>
           <div className={spaces.marTop}>
             <div className={classes.codeWrap}>
               <Class />

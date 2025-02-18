@@ -32,7 +32,7 @@ const Skills = () => {
           return (
             <span key={id} className={_colors.variable}>
               {' '}
-              {field.name} {id !== 3 ? '+' : ''}
+              {field.name} {id !== (method.fields.length-1) ? '+' : ' '}
             </span>
           )
         })}
