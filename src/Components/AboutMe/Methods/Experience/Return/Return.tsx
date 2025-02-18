@@ -66,7 +66,6 @@ const Return: FC<Props> = ({ experiences }) => {
             </div>
           )
         },
-        // <span className={_margins.marginLFTRT}>&#123;</span>
       )}
     </div>
   )
