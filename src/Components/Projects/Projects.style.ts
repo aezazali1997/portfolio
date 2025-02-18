@@ -29,7 +29,8 @@ export const styles = createUseStyles({
     opacity: 0.04,
     position: 'absolute',
     top: 45,
-    left: '35%',
+    left: '50%',
+    transform: 'translate(-50%,0)',
     background: 'transparent',
   },
   description:{
