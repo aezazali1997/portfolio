@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { styles } from './ContactMe.style'
 import classNames from 'classnames'
 import { timeStyles } from '@components/Home/Home.style'
-import Zonat from '@images/zonsol.png';
 import { observer } from 'mobx-react';
 //@ts-ignore
 import MobxReactForm from 'mobx-react-form';
