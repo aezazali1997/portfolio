@@ -80,7 +80,7 @@ export const styles = createUseStyles({
       margin: '1rem 0 .3rem 0',
       '& a': {
         textDecoration: 'none',
-        color: '#5918df',
+        color: '#fff',
         fontSize: 18,
         cursor: 'none',
         "& span":{
