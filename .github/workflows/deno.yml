@@ -2,54 +2,40 @@
 
 name: Deploy react app
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      # Install Node
-      - name: install node
-        uses: actions/setup-node@v2-beta
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 12
-      # Install Yarn
-      - name: install YARN
-        uses: borales/actions-yarn@v2.0.0
-        with:
-         cmd: install
-     # install react router
-      - name: install react router
-        #run: yarn add history@5 react-router-dom@^6.0.0-beta.0
-        run: sudo yarn add history@5 react-router-dom@^6.0.0-beta.0
-     # install craco
-      - name: install craco
-        #run:sudo yarn add craco
-        run: sudo yarn add craco
-       #build react app with yarn
-      - name: build react app
-        run: sudo yarn build
-       # install surge
-      - name: install surge
+          node-version: 16.x
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Install React Router
+        run: yarn add history@5 react-router-dom@^6.0.0-beta.0
+
+      - name: Install Craco
+        run: yarn add craco
+
+      - name: Build React App
+        run: yarn build
+
+      - name: Install Surge
         run: npm install -g surge
-         # run surge
-      - name: run surge
-        run: surge ./build portfolio-aezaz-ali-1997-react-app.surge.sh --token ${{secrets.SURGE_TOKEN}}     
-          
+
+      - name: Deploy to Surge
+        run: surge ./build portfolio-aezaz-ali-1997-react-app.surge.sh --token ${{secrets.SURGE_TOKEN}}
