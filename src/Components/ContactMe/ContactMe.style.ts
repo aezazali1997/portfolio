@@ -70,7 +70,7 @@ export const styles = createUseStyles({
     paddingLeft: '30rem',
     position: 'relative',
   },
-  zonat:{
+  linkedin:{
     marginLeft:".5rem",
   },
   grid: {

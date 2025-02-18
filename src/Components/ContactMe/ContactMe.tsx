@@ -199,7 +199,7 @@ const ContactMe: React.FC<Props> = observer(({ form }) => {
           <div>
             <a href="https://www.linkedin.com/in/aezaz-ali-2020/" target="_blank" rel="noreferrer">
               <span className='fab fa-linkedin'></span>
-              <span className={_classes.zonat}>Linkedin</span>
+              <span className={_classes.linkedin}>Linkedin</span>
             </a>
           </div>
           <div>
