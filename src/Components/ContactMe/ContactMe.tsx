@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { styles } from './ContactMe.style'
 import classNames from 'classnames'
 import { timeStyles } from '@components/Home/Home.style'
-import Zonat from '@images/zonsol.png';
 import { observer } from 'mobx-react';
 //@ts-ignore
 import MobxReactForm from 'mobx-react-form';
@@ -197,9 +196,9 @@ const ContactMe: React.FC<Props> = observer(({ form }) => {
             </a>
           </div>
           <div>
-            <a href="https://www.zonatsolutions.com/" target="_blank" rel="noreferrer">
-              <img className={_classes.blog} src={Zonat} alt="Zonat solutions logo" />
-              <span className={_classes.zonat}>Zonat Solutions</span>
+            <a href="https://www.linkedin.com/in/aezaz-ali-2020/" target="_blank" rel="noreferrer">
+              <span className='fab fa-linkedin'></span>
+              <span className={_classes.linkedin}>Linkedin</span>
             </a>
           </div>
           <div>
